@@ -3,7 +3,7 @@
 require 'rails/generators'
 require 'rails/generators/migration'
 
-class TeamPageGenerator < Rails::Generators::Base
+class MasterCounterGenerator < Rails::Generators::Base
   include Rails::Generators::Migration
   def self.source_root
     @source_root ||= File.join(File.dirname(__FILE__), 'templates')
@@ -18,6 +18,6 @@ class TeamPageGenerator < Rails::Generators::Base
   end
 
   def create_migration_file
-    migration_template 'migration.rb', 'db/migrate/create_team_members_table.rb'
+    migration_template 'migration.rb', 'db/migrate/master_counter_table.rb'
   end
 end
